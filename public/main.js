@@ -1,4 +1,5 @@
-var socket = io.connect('http://complexribi12.ddns.net:80', { 'forceNew': true });
+var socket = io.connect('https://chaennode.herokuapp.com/', { 'forceNew': true });
+//http://complexribi12.ddns.net:80
 //http://189.130.171.6:5357
 //Parte del cliente conectamos con localhost
 //escuchamos el evento messages
