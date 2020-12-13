@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();  
 var server = require('http').Server(app);  
 var io = require('socket.io')(server);
+var PORT = process.env.PORT || 3000;
 
 var messages = [{  
   id: 1,
@@ -26,6 +27,6 @@ io.on('connection', function(socket) {
   });
 });
 
-server.listen(80, function() {  
-  console.log("Servidor corriendo en http://localhost:8080");
+server.listen(PORT, function() {  
+  console.log("Servidor de chat corriendo");
 });
