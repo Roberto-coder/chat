@@ -12,10 +12,13 @@ socket.on('messages', function(data) {
 // esta función se encarga de pintar en el HTML los mensajes
 function render (data) {  
   var html = data.map(function(elem, index) {
-    return(`<div>
+    return(`
+            <p>
               <strong>${elem.author}</strong>:
               <em>${elem.text}</em>
-            </div>`);
+            </p>
+            <br>
+            `);
   }).join(" ");
 
   document.getElementById('messages').innerHTML = html;
